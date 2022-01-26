@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora | Dark</title>
+    <title>Calculadora | Dark and Light Mode</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
+    <div class="btn">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
     <div class="container">
         <form class="calculator" name="calc">
             <input type="text" class="value" readonly name="txt" placeholder="0">
@@ -32,6 +37,14 @@
             <span class="num equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i></span>
         </form>
     </div>
+
+    <script>
+        let body = document.querySelector('body');
+        let btn = document.querySelector('.btn');
+        btn.onclick = function(){
+            body.classList.toggle('light')
+        }
+    </script>
     
 </body>
 </html>
